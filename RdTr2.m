@@ -2,8 +2,7 @@ clear;
 close all;
 
 % import image
-I = imread('Sinogram_Source_-_Two_Squares_Phantom.png');
-
+I = im2double(imread('Sinogram_Source_-_Two_Squares_Phantom.png'));
 % I = phantom(128);
 
 % size of image
