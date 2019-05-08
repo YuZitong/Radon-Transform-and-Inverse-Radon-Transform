@@ -31,18 +31,18 @@ To Generate CT raw data (sinograms) of objects and to reconstruct the tomographi
 
   Reconstruct image
  
-  ![two_square_rec](iRdTr_results/two_square_rec.png "two_square_rec")
+    ![two_square_rec](iRdTr_results/two_square_rec.png "two_square_rec")
 
   Animation over the project angle
 
-  ![two_square_rec_gif](iRdTr_results/two_sqare_rec.gif "two_square_rec_gif")
+    ![two_square_rec_gif](iRdTr_results/two_sqare_rec.gif "two_square_rec_gif")
 
 * 128 by 128 two square phantom
 
   Reconstruct image
  
-  ![128phantom_rec](iRdTr_results/128phantom_rec.png "two_square_rec")
+    ![128phantom_rec](iRdTr_results/128phantom_rec.png "two_square_rec")
 
   Animation over the project angle
 
-  ![128phantom_rec_gif](iRdTr_results/128phantom_rec.gif "two_square_rec_gif")
+    ![128phantom_rec_gif](iRdTr_results/128phantom_rec.gif "two_square_rec_gif")
