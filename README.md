@@ -27,6 +27,8 @@ To Generate CT raw data (sinograms) of objects and to reconstruct the tomographi
 
 # Inverse Radon transform results
 
+## Filtered Back Projection (FBP)
+
 * 128 by 128 simulated head phantom
 
     Reconstruct image and animation over the project angles
