@@ -29,13 +29,11 @@ To Generate CT raw data (sinograms) of objects and to reconstruct the tomographi
 
 * 128 by 128 simulated head phantom
 
-    Reconstruct image
+    Reconstruct image and animation over the project angles
 
 <p align="center">
     <img src=iRdTr_results/128phantom_rec.png>
 </p>
-
-    Animation over the project angles
 
 <p align="center">
     <img src=iRdTr_results/128phantom_rec.gif>
@@ -43,13 +41,11 @@ To Generate CT raw data (sinograms) of objects and to reconstruct the tomographi
 
 * 128 by 128 two square phantom
 
-    Reconstruct image
+    Reconstruct image and animation over the project angles
 
 <p align="center">
     <img src=iRdTr_results/two_square_rec.png>
 </p>
-
-    Animation over the project angles
 
 <p align="center">
     <img src=iRdTr_results/two_sqare_rec.gif>
