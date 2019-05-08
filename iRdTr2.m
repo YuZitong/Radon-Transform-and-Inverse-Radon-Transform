@@ -1,8 +1,13 @@
 clear;
 
-R = load('ph.mat');
+R = load('./RdTr_results/ph.mat');
 R = R.R;
 [p,t] = size(R);
+fftR = fft(R);
+H = triang(p);
+fftR = bsxfun(@times, fftR, H);
+R = ifft(fftR,'symmetric');
+
 
 imgsize = floor(p/sqrt(2));
 
@@ -10,29 +15,30 @@ if mod(log2(imgsize),1) ~= 0
     imgsize = 2^(nextpow2((imgsize))-1);
 end
 
-theta = linspace(0,180,t+1);
-theta(end) = [];
+theta = linspace(0,180-180/t,t);
 n_vector = zeros(length(theta),2);
 n_vector(:,1) = cos(theta/180*pi)';
 n_vector(:,2) = sin(theta/180*pi)';
 
 rec = zeros(imgsize);
 frames = zeros(imgsize,imgsize,length(theta));
-for angle = theta+1
+for ag = 1:length(theta)
     for i = 1:p
-        if R(i,angle) ~= 0
+        if R(i,ag) ~= 0
             r = i-p/2;
             for x = -imgsize/2+1:imgsize/2-1
                 for y = -imgsize/2+1:imgsize/2-1
-                    if floor(x*n_vector(angle,1)+y*n_vector(angle,2) - r) == 0
-                        rec(-y+imgsize/2,x+imgsize/2) = rec(-y+imgsize/2,x+imgsize/2) + R(i,angle);
+                    if round(x*n_vector(ag,1)+y*n_vector(ag,2) - floor(r)) == 0
+                        rec(-y+imgsize/2,x+imgsize/2) = rec(-y+imgsize/2,x+imgsize/2) + R(i,ag);
                     end
                 end
             end
         end
     end
-    frames(:,:,angle) = (rec-min(rec(:)))/(max(rec(:))-min(rec(:)));
+    frames(:,:,ag) = (rec-min(rec(:)))/(max(rec(:))-min(rec(:)));
 end
+% rec1 = (rec-sum(R(:,1)))/(p-1);
+figure;
 imshow(rec,[])
 save_3D_matrix_as_gif('rec.gif',frames)
 
