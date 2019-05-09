@@ -1,6 +1,6 @@
 clear;
 
-R = load('./RdTr_results/ph.mat');
+R = load('./RdTr_results/RdTr.mat');
 R = R.R;
 [p,t] = size(R);
 fftR = fft(R);

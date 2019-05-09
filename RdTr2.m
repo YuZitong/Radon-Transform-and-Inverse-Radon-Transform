@@ -2,8 +2,8 @@ clear;
 close all;
 
 % import image
-% I = im2double(imread('./source_images/Sinogram_Source_-_Two_Squares_Phantom.png'));
-I = phantom(128);
+I = im2double(imread('./source_images/Sinogram_Source_-_Two_Squares_Phantom.png'));
+% I = phantom(128);
 
 % size of image
 [r,c] = size(I);
@@ -57,14 +57,14 @@ for ag = theta
     end
 end
 subplot(1,3,1)
-imshow(R,[]);title('Simulated')
+imshow(R,[]);title('RdTr2.m')
 Matlab_R = radon(I,theta);
 subplot(1,3,2)
-imshow(Matlab_R,[]);title('Matlab')
+imshow(Matlab_R,[]);title('Matlab build-in function')
 R_mid = R(:,num_projection/2);
 Matlab_mid = Matlab_R(:,num_projection/2);
 subplot(1,3,3)
-plot(R_mid,'r');hold on;plot(Matlab_mid,'b');title('Projections on 90˚');legend('Simulated','Matlab')
+plot(R_mid,'r');hold on;plot(Matlab_mid,'b');title('Projections on 90˚');legend('RdTr2.m','Matlab')
 
 function R = contribute(R, tho, ag, delta_theta, p)
 % compute the contribute of a singel subpixel
