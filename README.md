@@ -25,7 +25,7 @@ To Generate CT raw data (sinograms) of objects and to reconstruct the tomographi
 
 ![Sinogram-Two_Squares_Phantom](RdTr_results/Sinogram-Two_Squares_Phantom_128views_physical.png "Sinogram-Two_Squares_Phantom")
 
-[**code:**](RdTr3.m)
+[**code: RdTr3.m**](RdTr3.m)
 # Inverse Radon transform results
 
 ## Filtered Back Projection (FBP)
@@ -54,4 +54,4 @@ To Generate CT raw data (sinograms) of objects and to reconstruct the tomographi
     <img src=iRdTr_results/two_square_rec_physical.gif>
 </p>
 
-[**code:**](iRdTr3.m)
+[**code: iRdTr3.m**](iRdTr3.m)
