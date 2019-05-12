@@ -5,7 +5,7 @@ close all;
 %% image and projection initial settings
 
 % import image (suppose is a square)
-I = im2double(imread('./source_images/Sinogram_Source_-_Two_Squares_Phantom.png'));
+I = im2double(imread('./source_images/128Phantom.png'));
 % I = phantom(128);
 ROI = 100; % size of region of interest (mm)
 img_x_n = size(I,2);
